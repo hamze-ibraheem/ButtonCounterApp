@@ -18,12 +18,15 @@ class MainActivity : AppCompatActivity() {
         val button: Button = findViewById<Button>(R.id.button)
         textView = findViewById<TextView>(R.id.textView)
 
+        userINput.setText("")
+
         textView?.text = ""
 
         textView?.movementMethod = ScrollingMovementMethod()
 
         button.setOnClickListener {
             textView?.append(userINput.text.toString() + "\n")
+            userINput.text.clear()
         }
     }
 }
